@@ -1,0 +1,268 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.45;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  --page-bg: #ffffff;
+  --text: #212121;
+  --muted-text: #666666;
+  --surface: #ffffff;
+  --surface-border: #d7dce0;
+  --control-bg: #ffffff;
+  --control-text: #212121;
+  --placeholder: #666666;
+  --focus: #176b57;
+  --shadow: rgba(20, 20, 50, 0.06);
+  --link: #646cff;
+  color: var(--text);
+  background-color: var(--page-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--link);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+/* Form controls */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="search"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--surface-border);
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin-top: 6px;
+  color: var(--control-text);
+  background-color: var(--control-bg);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder);
+  opacity: 1;
+}
+
+select {
+  color: var(--control-text);
+  background-color: var(--control-bg);
+}
+
+select option {
+  color: var(--control-text);
+  background-color: var(--control-bg);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-green {
+  background: #34c77a
+}
+
+.btn-red {
+  background: #ff5c4d
+}
+
+.btn-blue {
+  background: #2f8cff
+}
+
+.btn-purple {
+  background: #6b1fa6
+}
+
+.cart-item {
+  border: 1px solid var(--surface-border);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: var(--surface);
+}
+
+.cart-item small {
+  color: var(--muted-text);
+}
+
+/* Billing card styles */
+.bill-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 6px 18px var(--shadow);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.bill-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.bill-label {
+  width: 120px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.bill-control {
+  flex: 1
+}
+
+.bill-select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--surface-border);
+  background-color: var(--control-bg);
+  color: var(--control-text);
+  font-size: 0.95rem;
+}
+
+.controls {
+  display: flex;
+  gap: 8px
+}
+
+.controls>* {
+  flex: 1
+}
+
+@media (max-width:420px) {
+  h3 {
+    font-size: 1.4rem
+  }
+
+  .btn {
+    font-size: 0.95rem
+  }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --page-bg: #ffffff;
+    --text: #212121;
+    --muted-text: #666666;
+    --surface: #ffffff;
+    --surface-border: #d7dce0;
+    --control-bg: #ffffff;
+    --control-text: #212121;
+    --placeholder: #666666;
+    --focus: #176b57;
+    --shadow: rgba(20, 20, 50, 0.06);
+    --link: #646cff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page-bg: #171b19;
+    --text: #f2f5f3;
+    --muted-text: #c0c9c4;
+    --surface: #222826;
+    --surface-border: #56615b;
+    --control-bg: #222826;
+    --control-text: #f2f5f3;
+    --placeholder: #b8c1bc;
+    --focus: #8fd4bd;
+    --shadow: rgba(0, 0, 0, 0.32);
+    --link: #9ecbff;
+  }
+}
+
+.app-container > div:last-child > div:nth-child(n + 3) {
+  color: var(--text);
+  background-color: var(--surface);
+  border-color: var(--surface-border) !important;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: var(--focus);
+}
